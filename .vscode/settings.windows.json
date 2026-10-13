@@ -1,0 +1,17 @@
+{
+    "clangd.enabled": true,
+    "clangd.arguments": [
+        "--query-driver=D:/software/mingw64/bin/g++.exe",
+        "--background-index",
+        "--clang-tidy",
+        "--header-insertion=never",
+        "--inlay-hints"
+    ],
+
+    "cppSingleFile.compiler": "D:/software/mingw64/bin/g++.exe",
+
+    "files.exclude": {
+        "**/output": true,
+        "**/*.o": true
+    }
+}

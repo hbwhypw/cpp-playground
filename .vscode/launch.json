@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Current File",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${fileDirname}/output/${fileBasenameNoExtension}",
+            "args": [],
+            "cwd": "${fileDirname}",
+            "stopAtEntry": false,
+            "preLaunchTask": "Build current file"
+        }
+    ]
+}

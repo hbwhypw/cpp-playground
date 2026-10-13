@@ -1,0 +1,17 @@
+{
+    "clangd.enabled": true,
+    "clangd.arguments": [
+        "--query-driver=/usr/bin/clang++",
+        "--background-index",
+        "--clang-tidy",
+        "--header-insertion=never",
+        "--inlay-hints"
+    ],
+
+    "cppSingleFile.compiler": "clang++",
+
+    "files.exclude": {
+        "**/output": true,
+        "**/*.o": true
+    }
+}
