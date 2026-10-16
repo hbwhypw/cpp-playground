@@ -1,5 +1,10 @@
 # ============= VS Code Settings =========
 .vscode/settings.json
+*.o
+*.exe
+*.dSYM/
+build/
+.out/
 output/
 
 # ============= MAC OS ===================
