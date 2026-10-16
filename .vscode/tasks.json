@@ -2,6 +2,22 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "ensure output dir",
+            "type": "shell",
+            "command": "mkdir -p \"${fileDirname}/output\" && sleep 0.1",
+            "windows": {
+                "command": "if not exist output mkdir output && sleep 0.1"
+            },
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [],
+            "runOptions": {
+                "runOn": "default"
+            }
+            // 故意不加 group → 不出现在任务面板
+        },
+        {
             "label": "Build current file",
             "type": "shell",
             "command": "${config:cppSingleFile.compiler}",
@@ -18,6 +34,10 @@
             "options": {
                 "cwd": "${fileDirname}"
             },
+            "dependsOn": [
+                "ensure output dir"
+            ],
+            "dependsOrder": "sequence",
             "problemMatcher": [
                 "$gcc"
             ],
